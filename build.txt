@@ -1,0 +1,3 @@
+// Web/Php Storm Watcher Config:
+
+--sourcemap $ProjectFileDir$/dev/code/ts/EarthMain.ts --out $ProjectFileDir$/dev/code/js/EarthMain.js 

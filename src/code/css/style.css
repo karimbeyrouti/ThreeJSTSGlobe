@@ -1,0 +1,57 @@
+
+body {
+    font-family: Monospace;
+    background-color: #000000;
+    margin: 0px;
+    overflow: hidden;
+}
+
+a{
+
+    color: #008800;
+
+
+}
+
+#logoContainer{
+
+    top:0px;
+
+    position: absolute;
+    left: 60px;
+    width: 100px;
+    height: 90px;
+    z-index: 25;
+    background: #ffffff url("../../media/images/klogo.jpg") no-repeat 0% 90%;
+
+}
+
+a{
+
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+
+    color: #ffffff;
+    text-decoration: underline;
+
+}
+
+#credits{
+
+    font-family: Arial;
+    letter-spacing: .1em;
+    font-size: 8pt;
+    position: absolute;
+    bottom: 0px;
+    width: 1180px;
+    height: 20px;
+    z-index: 30;
+    color: #cccccc;
+    right: 10px;
+    text-align: right;
+
+}
+
