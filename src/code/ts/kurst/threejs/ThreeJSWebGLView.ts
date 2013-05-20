@@ -11,7 +11,7 @@
  *      canvas.getContext('webgl');
  */
 /**
- * @author Karim Beyrouti / http://kurst.co.uk ( typescript conversion )
+ * @author Karim Beyrouti / http://kurst.co.uk 
  */
 module kurst.threejs {
 
@@ -30,7 +30,6 @@ module kurst.threejs {
         //------------------------------------------------------------------------
 
         private detector            : kurst.threejs.Detector;
-        private renderFnc           : Function;
         private renderFlag          : bool = false;
 
         //------------------------------------------------------------------------
