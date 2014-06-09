@@ -19,8 +19,8 @@ module.exports = function(grunt) {
 
 		ts: {
 			ThreeJSGlobe: {
-				src: ['src/code/ts/EarthMain.ts'],
-				out: 'src/code/js/EarthMain.js',
+				src: ['src/EarthMain.ts'],
+				out: 'bin/js/EarthMain.js',
 				options: {
 					target: 'es5',
 					sourcemap: true,
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 
 		watch: {
 			ThreeJSGlobe: {
-				files: ['src/code/ts/**/*.ts'],
+				files: ['src/**/*.ts'],
 				tasks: ['ts:ThreeJSGlobe' ],
 				options: {
 					spawn: false
