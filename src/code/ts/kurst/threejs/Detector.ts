@@ -1,4 +1,4 @@
-/// <reference path="../../libs/maps/webgl.d.ts" />
+// <reference path="../../libs/maps/webgl.d.ts" />
 /**
  * @author alteredq / http://alteredqualia.com/
  * @author mr.doob / http://mrdoob.com/
@@ -24,19 +24,19 @@ module kurst.threejs {
 
     export class Detector{
 
-        public webgl    : bool;
-        public canvas   : bool;
-        public workers  : bool;
-        public fileAPI  : bool;
+        public webgl    : boolean;
+        public canvas   : boolean;
+        public workers  : boolean;
+        public fileAPI  : boolean;
 
         //--------------------------------------------------------------------------
 
         constructor() {
 
-            this.canvas     = <bool> !! this.createCanvas();
+            this.canvas     = <boolean> !! this.createCanvas();
             this.webgl      = this.testWebGlRenderingContext();
-            this.workers    = <bool> !! window['Worker'];
-            this.fileAPI    = <bool> !! ( window['File'] && window['FileReader'] && window['FileList'] && window['Blob'] );
+            this.workers    = <boolean> !! window['Worker'];
+            this.fileAPI    = <boolean> !! ( window['File'] && window['FileReader'] && window['FileList'] && window['Blob'] );
 
         }
 
@@ -89,13 +89,13 @@ module kurst.threejs {
 
         /*
          */
-        private testWebGlRenderingContext() : bool {
+        private testWebGlRenderingContext() : boolean {
 
             try{
 
-                var experimental : bool =  <bool> !! this.createCanvas().getContext("experimental-webgl" );
+                var experimental : boolean =  <boolean> !! this.createCanvas().getContext("experimental-webgl" );
 
-                var webGL        : bool =  <bool> !! this.createCanvas().getContext("webgl" );
+                var webGL        : boolean =  <boolean> !! this.createCanvas().getContext("webgl" );
 
                 return experimental || webGL ;
 

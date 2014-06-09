@@ -45,15 +45,15 @@ module kurst.threejs {
 
         //--PUBLIC----------------------------------------------------------------------
 
-        public enabled                 : bool       = true;
+        public enabled                 : boolean       = true;
         public rotateSpeed             : number     = 1.0;
         public zoomSpeed               : number     = 1.2;
         public panSpeed                : number     = 0.3;
         public wheelSpeed              : number     = 0.15;
-        public noRotate                : bool       = false;
-        public noZoom                  : bool       = false;
-        public noPan                   : bool       = false;
-        public staticMoving            : bool       = false;
+        public noRotate                : boolean       = false;
+        public noZoom                  : boolean       = false;
+        public noPan                   : boolean       = false;
+        public staticMoving            : boolean       = false;
         public dynamicDampingFactor    : number     = 0.2;
         public minDistance             : number     = 0;
         public maxDistance             : number     = Infinity;
@@ -121,7 +121,7 @@ module kurst.threejs {
             this.target0        = this.target.clone();
             this.position0      = this.object.position.clone();
             this.up0            = this.object.up.clone();
-            this.keys           = new Object[](  65 , 83 , 68 );
+            this.keys           = new Array<Object>(  65 , 83 , 68 );
 
             // Event Proxies
             this.mousewheelFnc      = ( event ) => { this.mousewheel( event );}
@@ -208,7 +208,7 @@ module kurst.threejs {
             this.dispatchEvent( this.changeEvent );
             this.lastPosition.copy( this.object.position );
 
-        };
+        }
 
         //--PRIVATE----------------------------------------------------------------------
 
@@ -222,7 +222,7 @@ module kurst.threejs {
 
             }
 
-        };
+        }
         /*
          */
         private getMouseOnScreen ( clientX : number , clientY : number ) : THREE.Vector2 {
@@ -232,7 +232,7 @@ module kurst.threejs {
                 ( clientY - this.screen.offsetTop ) / this.radius * 0.5
             );
 
-        };
+        }
         /*
          */
         private getMouseProjectionOnBall ( clientX : number , clientY : number ) : THREE.Vector3 {
@@ -262,7 +262,7 @@ module kurst.threejs {
                 projection.add( this._eye.setLength( mouseOnBall.z ) );
             return projection;
 
-        };
+        }
         /*
          */
         private rotateCamera () : void {
@@ -296,7 +296,7 @@ module kurst.threejs {
 
             }
 
-        };
+        }
         /*
          */
         private zoomCamera () : void {
@@ -329,7 +329,7 @@ module kurst.threejs {
 
             }
 
-        };
+        }
         /*
          */
         private panCamera () : void {
@@ -394,7 +394,7 @@ module kurst.threejs {
 
             this.radius = ( this.screen.width + this.screen.height ) / 4;
 
-        };
+        }
         /*
          */
         private keydown( event ) : void {

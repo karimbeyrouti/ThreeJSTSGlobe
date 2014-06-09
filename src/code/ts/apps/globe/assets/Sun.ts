@@ -21,7 +21,7 @@ module apps.globe.assets {
         public textureFlare4    : string = "media/textures/flare/flare4.jpg";
         public textureFlare8    : string = "media/textures/flare/flare8.jpg";
         public sunMap           : string = "media/textures/flare/sunmap.png";
-        public enableFlare      : bool   = true;
+        public enableFlare      : boolean   = true;
 
     }
 

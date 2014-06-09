@@ -14,7 +14,7 @@ module kurst.data {
 
         private apikey      : string;
         private jsonLoader  : JSonLoader;
-        private useProxy    : bool = true;
+        private useProxy    : boolean = true;
         private proxy       : string = 'proxy.php';
         private proxyParam  : string = 'url';
         private data        : GeoData;
@@ -58,7 +58,7 @@ module kurst.data {
         }
         /*
          */
-        public enableProxy( flag : bool , uri : string , param : string ) : void {
+        public enableProxy( flag : boolean , uri : string , param : string ) : void {
 
             this.useProxy   = flag;
             this.proxy      = uri;

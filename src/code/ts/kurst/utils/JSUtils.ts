@@ -14,7 +14,7 @@ module kurst.utils {
 
         /*
          */
-        static isFireFox() : bool{
+        static isFireFox() : boolean{
 
             return ( navigator.userAgent.search("Firefox") != -1 );
 
@@ -23,7 +23,7 @@ module kurst.utils {
 
         /*
          */
-        static isIE() : bool{
+        static isIE() : boolean{
 
             return ( navigator.appVersion.indexOf("MSIE") != -1 );
 
@@ -44,7 +44,7 @@ module kurst.utils {
         }
         /*
          */
-        static isFlashEnabled() : bool {
+        static isFlashEnabled() : boolean {
 
             if( JSUtils.isIE() ) {
 
@@ -89,4 +89,3 @@ module kurst.utils {
     }
 
 }
-

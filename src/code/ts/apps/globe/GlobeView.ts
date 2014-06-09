@@ -102,7 +102,7 @@ module apps.globe {
         /*
          * Render the globe
          */
-        private render() : void {
+        public render() : void {
 
             this.earth.container.rotation.y += .0006;
             this.earth.render();

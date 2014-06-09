@@ -15,7 +15,7 @@ module kurst.event {
 
         //--------------------------------------------------------------------------
 
-        private listeners   : Object[] = new Object[];
+	    private listeners:Array<Array<Function>> = new Array<Array<Function>>();
         private lFncLength  : number;
 
         //--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ module kurst.event {
 
             if ( this.listeners[ type ] === undefined ) {
 
-                this.listeners[ type ] = new Function[];
+                this.listeners[ type ] = new Array<Function>();
 
             }
 

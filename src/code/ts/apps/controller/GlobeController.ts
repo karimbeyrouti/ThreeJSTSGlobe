@@ -25,7 +25,7 @@ module apps.controller {
 
         //------------------------------------------------------------------------------
 
-        private debug           : bool      = false;
+        private debug           : boolean      = false;
         private geoCookieName   : string    = 'GeoCookie_dataSent';
 
         //------------------------------------------------------------------------------

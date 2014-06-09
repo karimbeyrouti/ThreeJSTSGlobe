@@ -1,4 +1,3 @@
-/// <reference path="../../libs/maps/webgl.d.ts" />
 /// <reference path="Detector.ts" />
 /// <reference path="TrackballControls.ts" />
 /// <reference path="../events/EventDispatcher.ts" />
@@ -25,12 +24,12 @@ module kurst.threejs {
         public container            : HTMLElement;//
         public clearColor           : number = 0x000000;
         public trackControls        : kurst.threejs.TrackballControls;
-        public trackControlEnabled  : bool = false;
+        public trackControlEnabled  : boolean = false;
 
         //------------------------------------------------------------------------
 
         private detector            : kurst.threejs.Detector;
-        private renderFlag          : bool = false;
+        private renderFlag          : boolean = false;
 
         //------------------------------------------------------------------------
 
@@ -51,7 +50,7 @@ module kurst.threejs {
 
         /*
          */
-        public enableTrackBall( flag : bool ) : void {
+        public enableTrackBall( flag : boolean ) : void {
 
             if ( flag ) {
 

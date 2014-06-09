@@ -31,7 +31,7 @@ module kurst.core {
          */
         public getElementsByClassNme( theClass : string ) : Node[] {
 
-            var classElms   : Node[] = new Node[];
+            var classElms   : Array<Node> = new Array<Node>();
             var node        : Document = document;
 
             var i = 0

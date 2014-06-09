@@ -42,13 +42,13 @@ module kurst.threejs {
         //--VARS PUBLIC----------------------------------------------------------------------
 
         public center                   : THREE.Vector3     = new THREE.Vector3();
-        public userZoom                 : bool              = true;
+        public userZoom                 : boolean              = true;
         public userZoomSpeed            : number            = 1.0;
-        public userRotate               : bool              = true;
+        public userRotate               : boolean              = true;
         public userRotateSpeed          : number            = 1.0;
-        public userPan                  : bool              = true;
+        public userPan                  : boolean              = true;
         public userPanSpeed             : number            = 2.0;
-        public autoRotate               : bool              = false;
+        public autoRotate               : boolean              = false;
         public autoRotateSpeed          : number            = 2.0; // 30 seconds per round when fps is 60
         public minPolarAngle            : number            = 0; // radians
         public maxPolarAngle            : number            = Math.PI; // radians
@@ -124,7 +124,7 @@ module kurst.threejs {
 
             this.thetaDelta -= angle;
 
-        };
+        }
         /*
          */
         public rotateRight ( angle ) {
@@ -137,7 +137,7 @@ module kurst.threejs {
 
             this.thetaDelta += angle;
 
-        };
+        }
         /*
          */
         public rotateUp ( angle ) {
@@ -150,7 +150,7 @@ module kurst.threejs {
 
             this.phiDelta -= angle;
 
-        };
+        }
         /*
          */
         public rotateDown ( angle ) {
@@ -163,7 +163,7 @@ module kurst.threejs {
 
             this.phiDelta += angle;
 
-        };
+        }
         /*
          */
         public zoomIn ( zoomScale ? ) {
@@ -176,7 +176,7 @@ module kurst.threejs {
 
             this.scale /= zoomScale;
 
-        };
+        }
         /*
          */
         public zoomOut ( zoomScale ? ) {
@@ -189,7 +189,7 @@ module kurst.threejs {
 
             this.scale *= zoomScale;
 
-        };
+        }
         /*
          */
         public pan ( distance : THREE.Vector3 ) {
@@ -200,7 +200,7 @@ module kurst.threejs {
             this.object.position.add( distance );
             this.center.add( distance );
 
-        };
+        }
         /*
          */
         public update () {

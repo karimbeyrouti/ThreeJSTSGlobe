@@ -11,14 +11,14 @@ module kurst.utils {
 
         /*
          */
-        static public get( name : string ) : Object {
+        static get( name : string ) : Object {
 
             return CookiesUtil.has(name) ? CookiesUtil.list()[name] : null;
 
         }
         /*
          */
-        static public has( name : string ) : Object {
+        static has( name : string ) : Object {
 
             var cookieStr : string = <string> document.cookie;
             return new RegExp("(?:;\\s*|^)" + encodeURIComponent(name) + '=').test( cookieStr );
@@ -26,7 +26,7 @@ module kurst.utils {
         }
         /*
          */
-        static public list( nameRegExp ? ) : Object {
+        static list( nameRegExp ? ) : Object {
 
             var pairs = document.cookie.split(';'), pair, result = {};
 
@@ -46,7 +46,7 @@ module kurst.utils {
         }
         /*
          */
-        static public set(name, value, options ? ) {
+        static set(name, value, options ? ) {
 
             options = options || {};
 
@@ -92,7 +92,7 @@ module kurst.utils {
         }
         /*
          */
-        static public remove(name : string , options ? ) {
+        static remove(name : string , options ? ) {
 
             var opt2 = {};
 
@@ -112,14 +112,14 @@ module kurst.utils {
 
         /*
          */
-        static private isRegExp( o ) {
+        static isRegExp( o ) {
 
             return '[object RegExp]' == Object.prototype.toString.call(o);
 
         }
         /*
          */
-        static private isDate( o ) {
+        static isDate( o ) {
 
             return '[object RegExp]' == Object.prototype.toString.call(o);
 
